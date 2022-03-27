@@ -125,6 +125,11 @@
 .foto1{
         width: 30%;
         height: auto;
+        transition: all 5s;
+}
+.foto1:hover{
+        width: 40%;
+        transform: rotate(360deg); 
 }
 .sec_index{
         margin: 60px;
@@ -165,6 +170,11 @@
         padding: 15px;
         width: 90%;
         height: 90%;
+        transition: all 3s;
+}
+.foto2:hover{
+        height: 100%;
+        width: 100%;
 }
 .foto3{
         grid-area: image;  
@@ -173,12 +183,16 @@
         padding: 15px;
         width: 90%;
         height: 90%;
+        height: 90%;
+        transition: all 3s;
+}
+.foto3:hover{
+        height: 100%;
+        width: 100%;
 }
 .piefoto{
         grid-area: titulo;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
         border: 2px dashed whitesmoke;
         color: whitesmoke;
         width: 90%;
@@ -187,9 +201,7 @@
 }
 .piefoto1{
         grid-area: titulo;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
         border: 2px dashed whitesmoke;
         color: whitesmoke;
         width: 90%;
@@ -231,6 +243,11 @@ form label {
 }
 form input {
         display: block;
+        transition: all 2s;
+}
+form input:focus{
+        width: 30%;
+        font-size: 25px;
 }
 
         /* NOSOTROS */
@@ -298,12 +315,34 @@ form input {
         text-align: center;
 }
 table {
-        background-color:#1d2b9a;
-        color: #97f3ee;
-        border: #1d2b9a;
+        /* background-color:#1d2b9a; */
+        color: whitesmoke;
+        border: whitesmoke;
         padding: 10px 10px;
         margin: 40px auto;
         width: 80%;
+        animation-name: fondoTabla;
+        animation-duration: 7s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+}
+@keyframes fondoTabla {
+        0% {
+            background: rgb(131,58,180);
+            background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+        }
+        40% {
+            background: rgb(34,193,195);
+            background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+        }
+        60%{
+            background: rgb(4,212,254);
+            background: radial-gradient(circle, rgba(4,212,254,0.5200674019607843) 35%, rgba(120,238,11,0.5452774859943977) 99%);
+        }
+        100%{ 
+            background: rgb(238,174,202);
+            background: radial-gradient(circle, rgba(238,174,202,1) 39%, rgba(148,187,233,1) 100%);
+        }
 }
 
 .h2talles{
@@ -623,13 +662,22 @@ footer li{
                 align-content: center;
                 flex-wrap: wrap;
         }
+        .foto1:hover{
+                display: none;
+        }
         .foto2{
                 width: 70%;
                 height: 70%;
         }
+        .foto2:hover{
+                display: none;
+        }
         .foto3{
                 width: 70%;
                 height: 70%;
+        }
+        .foto3:hover{
+                display: none;
         }
         .piefoto{
                 width: 70%;
@@ -650,7 +698,10 @@ footer li{
         form label {
                 font-size: small;
         }
-
+        form input:focus{
+                display: none;
+        }
+        
                 /* NOSOTROS */
 
         .main_div_nos h2{
