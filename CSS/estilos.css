@@ -662,22 +662,14 @@ footer li{
                 align-content: center;
                 flex-wrap: wrap;
         }
-        .foto1:hover{
-                display: none;
         }
         .foto2{
                 width: 70%;
                 height: 70%;
         }
-        .foto2:hover{
-                display: none;
-        }
         .foto3{
                 width: 70%;
                 height: 70%;
-        }
-        .foto3:hover{
-                display: none;
         }
         .piefoto{
                 width: 70%;
